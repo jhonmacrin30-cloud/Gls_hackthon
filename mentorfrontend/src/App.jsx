@@ -6,6 +6,8 @@ import { AuthProvider } from './context/AuthContext';
 import { OnboardingLayout, Step1, Step2, Step3, Step4, Step5, Step6 } from './pages/onboarding'; // Imported from index.js
 import RequireAuth from './components/RequireAuth';
 import DashboardLayout from './layouts/DashboardLayout';
+import MenteeMessages from './pages/messages/MenteeMessages';
+import MenteePlan from './pages/mentees/MenteePlan';
 import {
   DashboardHome,
   Sessions,
@@ -43,6 +45,8 @@ function App() {
               <Route index element={<DashboardHome />} />
               <Route path="sessions" element={<Sessions />} />
               <Route path="mentees" element={<Mentees />} />
+              <Route path="messages" element={<MenteeMessages />} />
+              <Route path="mentees/:menteeId/plan" element={<MenteePlan />} />
               <Route path="tasks" element={<Tasks />} />
               <Route path="profile" element={<Profile />} />
               <Route path="settings" element={<Settings />} />

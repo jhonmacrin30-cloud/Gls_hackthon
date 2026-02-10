@@ -8,7 +8,8 @@ import {
     User,
     Settings,
     DollarSign,
-    LogOut
+    LogOut,
+    MessageCircle
 } from 'lucide-react';
 
 const Sidebar = () => {

@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { User, MessageCircle, MoreVertical, TrendingUp, CheckSquare } from 'lucide-react';
 
 const Mentees = () => {
+    const navigate = useNavigate();
     // Mock Mentees Data
     const mentees = [
         {
@@ -85,11 +87,17 @@ const Mentees = () => {
                             </div>
                         </div>
                         <div className="bg-gray-50 px-6 py-3 border-t border-gray-100 flex justify-between">
-                            <button className="flex items-center text-sm font-medium text-gray-700 hover:text-indigo-600">
+                            <button
+                                onClick={() => navigate('/messages')}
+                                className="flex items-center text-sm font-medium text-gray-700 hover:text-indigo-600"
+                            >
                                 <MessageCircle className="w-4 h-4 mr-2" />
                                 Message
                             </button>
-                            <button className="flex items-center text-sm font-medium text-gray-700 hover:text-indigo-600">
+                            <button
+                                onClick={() => navigate(`/mentees/${mentee.id}/plan`)}
+                                className="flex items-center text-sm font-medium text-gray-700 hover:text-indigo-600"
+                            >
                                 <CheckSquare className="w-4 h-4 mr-2" />
                                 View Plan
                             </button>
